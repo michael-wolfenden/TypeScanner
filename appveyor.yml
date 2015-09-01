@@ -9,7 +9,7 @@ test: off
 
 # Build cache
 cache:
-  - src\packages -> **\packages.config
+  - packages -> **\packages.config
 
 artifacts:
   - path: artifacts\nuget-package\*.nupkg
