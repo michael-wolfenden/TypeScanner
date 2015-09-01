@@ -9,6 +9,9 @@
     <Import_RootNamespace>TypeScanner</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TypeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TypesExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Types.cs" />
   </ItemGroup>
 </Project>

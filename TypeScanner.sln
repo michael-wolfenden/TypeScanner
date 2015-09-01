@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.Portable", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.UnitTests", "src\TypeScanner.UnitTests\TypeScanner.UnitTests.csproj", "{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.UnitTests.TestAssembly", "src\TypeScanner.UnitTests.TestAssembly\TypeScanner.UnitTests.TestAssembly.csproj", "{02728D9B-6D40-4717-9719-7B07572B584F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		src\TypeScanner\TypeScanner.projitems*{b9d135f4-fc0f-4646-bbc2-dfcd055bab51}*SharedItemsImports = 4
@@ -34,6 +36,10 @@ Global
 		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02728D9B-6D40-4717-9719-7B07572B584F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02728D9B-6D40-4717-9719-7B07572B584F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02728D9B-6D40-4717-9719-7B07572B584F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02728D9B-6D40-4717-9719-7B07572B584F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -2,25 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using TypeScanner;
 
 public static class Types
 {
     public static IEnumerable<Type> InAssembly(Assembly assembly)
     {
+        if (assembly == null) throw new ArgumentNullException(nameof(assembly));
+
         return GetLoadableTypes(assembly);
     }
 
-    public static IEnumerable<Type> InAssemblyContainingType<T>()
+    public static IEnumerable<Type> InAssemblyContaining<T>()
     {
         var assembly = GetAssemblyFromType<T>();
         return GetLoadableTypes(assembly);
+    }
+
+    public static IEnumerable<Type> InSameNamespaceAs<T>()
+    {
+        return Types
+            .InAssemblyContaining<T>()
+            .InNamespace(typeof (T).Namespace);
     }
 
     private static IEnumerable<Type> GetLoadableTypes(Assembly assembly)
     {
         try
         {
-            return GetTypes(assembly);
+            return GetTypesFromAssembly(assembly);
         }
         catch (ReflectionTypeLoadException ex)
         {
@@ -31,7 +41,7 @@ public static class Types
         }
     }
 
-    private static IEnumerable<Type> GetTypes(Assembly assembly)
+    private static IEnumerable<Type> GetTypesFromAssembly(Assembly assembly)
     {
 #if PORTABLE
         return assembly.DefinedTypes.Select(t => t.AsType());
