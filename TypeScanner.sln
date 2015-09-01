@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "TypeScanner", "src\TypeScanner\TypeScanner.shproj", "{D918E98D-976D-41D6-B06B-5B0342AA58A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.Net40", "src\TypeScanner.Net40\TypeScanner.Net40.csproj", "{B9D135F4-FC0F-4646-BBC2-DFCD055BAB51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.Portable", "src\TypeScanner.Portable\TypeScanner.Portable.csproj", "{E62F8F51-1738-4C65-BA55-B4F1A54FACA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeScanner.UnitTests", "src\TypeScanner.UnitTests\TypeScanner.UnitTests.csproj", "{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\TypeScanner\TypeScanner.projitems*{b9d135f4-fc0f-4646-bbc2-dfcd055bab51}*SharedItemsImports = 4
+		src\TypeScanner\TypeScanner.projitems*{d918e98d-976d-41d6-b06b-5b0342aa58a6}*SharedItemsImports = 13
+		src\TypeScanner\TypeScanner.projitems*{e62f8f51-1738-4c65-ba55-b4f1a54faca5}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9D135F4-FC0F-4646-BBC2-DFCD055BAB51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9D135F4-FC0F-4646-BBC2-DFCD055BAB51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9D135F4-FC0F-4646-BBC2-DFCD055BAB51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9D135F4-FC0F-4646-BBC2-DFCD055BAB51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E62F8F51-1738-4C65-BA55-B4F1A54FACA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E62F8F51-1738-4C65-BA55-B4F1A54FACA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E62F8F51-1738-4C65-BA55-B4F1A54FACA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E62F8F51-1738-4C65-BA55-B4F1A54FACA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E8F773C-47A3-47EA-A1DB-6E56C3650E78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
