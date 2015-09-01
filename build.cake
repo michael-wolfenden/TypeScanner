@@ -35,7 +35,6 @@ var testResultsDir = artifactsDir + Directory("test-results");
 
 // NuGet
 var nuspecFilename = projectName + ".nuspec";
-var nuspecSrcFile = File(nuspecFilename);
 var nuspecSrcFile = srcDir + File(nuspecFilename);
 var nuspecDestFile = buildDir + File(nuspecFilename);
 var nupkgDestDir = artifactsDir + Directory("nuget-package");
@@ -56,7 +55,14 @@ Dictionary<string, object> gitVersionOutput;
 
 Setup(() =>
 {
-    Information("Building {0}", projectName);
+    Information("");
+    Information("████████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗ █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗ ");
+    Information("╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗");
+    Information("   ██║    ╚████╔╝ ██████╔╝█████╗  ███████╗██║     ███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝");
+    Information("   ██║     ╚██╔╝  ██╔═══╝ ██╔══╝  ╚════██║██║     ██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗");
+    Information("   ██║      ██║   ██║     ███████╗███████║╚██████╗██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║");
+    Information("   ╚═╝      ╚═╝   ╚═╝     ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝");
+    Information("");
 });
 
 Teardown(() =>
