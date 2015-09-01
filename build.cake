@@ -48,6 +48,7 @@ var projectToNugetFolderMap = new Dictionary<string, string>() {
 var gitVersionPath = ToolsExePath("GitVersion.exe");
 Dictionary<string, object> gitVersionOutput;
 
+var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -124,6 +125,14 @@ Task("__UpdateAssemblyVersionInformation")
     Information("AssemblyInformationalVersion -> {0}", gitVersionOutput["InformationalVersion"]);
 });
 
+Task("__UpdateAppVeyorBuildNumber")
+    .WithCriteria(() => isRunningOnAppVeyor)
+    .Does(() =>
+{
+    var fullSemVer = gitVersionOutput["FullSemVer"].ToString();
+    AppVeyor.UpdateBuildVersion(fullSemVer);
+});
+
 Task("__BuildSolutions")
     .Does(() =>
 {
@@ -187,6 +196,7 @@ Task("Build")
     .IsDependentOn("__Clean")
     .IsDependentOn("__RestoreNugetPackages")
     .IsDependentOn("__UpdateAssemblyVersionInformation")
+    .IsDependentOn("__UpdateAppVeyorBuildNumber")
     .IsDependentOn("__BuildSolutions")
     .IsDependentOn("__RunTests")
     .IsDependentOn("__CopyOutputToNugetFolder")
