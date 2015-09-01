@@ -182,6 +182,7 @@ Task("__CreateNugetPackage")
 
     var nuGetPackSettings = new NuGetPackSettings {
         Version = nugetVersion,
+        Symbols = true,
         OutputDirectory = nupkgDestDir
     };
 
